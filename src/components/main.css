@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+
+.main-head{
+    position: fixed;
+    width: 100%;
+    height: 160px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all ease;
+    z-index: 100;
+}
+.main-head.Scroll{
+    background: rgb(0, 0, 0);
+    height: 80px;
+    transition: 0.5s all ease;
+}
+.logo-div{
+    position: absolute;
+    left: 2%;
+    z-index: 10000;
+    cursor: pointer;
+}
+.logo{
+    width: 100px;
+    transition: 0.5s all ease;
+}
+.logo.shrink{
+    width: 50px;
+    transition: 0.5s all ease;
+}
+.nav{
+    margin-left: auto;
+    width: 40%;
+}
+.nav-list{
+    margin-top: 2%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 20%);
+}
+.nav-list li a{
+    text-decoration: none;
+    font-family: 'Staatliches', cursive;
+    font-weight: 900;
+    font-size: larger;
+    color: cornsilk;
+}
+.nav-list li{
+    letter-spacing: 2px;
+    text-align: center;
+    width: 40%;
+    height: 40px;
+}
+.nav-list li:hover{
+    border-bottom: 3px solid cornsilk;
+    transition: 0.3s all ease
+}
+.bars{
+    color: cornsilk;
+    position: absolute;
+    right: 2%;
+    font-size: x-large;
+    cursor: pointer;
+    display: none;
+    z-index: 10000;
+}
+.animation{
+    height: 60vh;
+}
+.about-main{
+    min-height: 50vh;
+    background: cadetblue;
+}
+/* .main-home{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+} */
+/* .main-home h1{
+    color: #fff3b0;
+    letter-spacing: 5px;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 5%;
+    position: relative;
+} */
+/* .main-home h1::before,h1::after{
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.main-home h1::before{
+    background: #0d47a1;
+    border: none;
+    animation: typewriter 6s steps(25) 1s forwards;
+}
+.main-home h1::after{
+    width: 0.325rem;
+    background: #fff3b0;
+    animation: 
+    typewriter 6s steps(25) 1s forwards,
+    blink 750ms steps(25) infinite
+}
+.main-home h3{
+    color: khaki;
+    font-size: x-large;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 6px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fade 2s ease 7s forwards;
+} */
+/* @keyframes typewriter {
+    to{
+        left: 100%;
+    }
+}
+@keyframes blink {
+    to{
+        background: transparent;
+    }
+}
+@keyframes fade {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        position: absolute;
+        top: 0%;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 0, 0);
+        transition: 0.5s all ease;
+        padding: 20%;
+    }
+    .nav.toggle{
+        right: 0;
+        transition: 0.5s all ease;
+    }
+    .nav-list{
+        margin-top: -2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .bars{
+        display: block;
+    }
+    /* .main-home{
+        width: 75%;
+        font-size: small;
+    } */
+}
+@media screen and (max-width: 600px) {
+    /* .main-home{
+        width: 79%;
+    }
+    .main-home h1{
+        font-size: 1rem;
+    }
+    .main-home h3{
+        font-size: 0.9rem;
+    } */
+}
+
+
+/* ///////////////////Project/////////////////////////// */
+.blur{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
+    color: azure;
+}
+/* ///////////////////////////////////////////// */
+
+/* ///////////////////Contact/////////////////////////// */
+.contact-main{
+    height: 50vh;
+}
+.form-section{
+    width: 50%;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 5px rgba(0, 0, 0, 0.19);
+}
+.detail-section{
+    width: 50%;
+    padding: 2%;
+    background: #f1faee;
+}
+.contain{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+input[type=text], input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.btn {
+  width: 100%;
+  /* color: white; */
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .contain{
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+    .form-section{
+        width: 100%;
+    }
+    .detail-section{
+        width: 100%;
+    }
+    .contact-main{
+        height: 70vh;
+    }
+}
+/* ///////////////////////////////////////////// */
